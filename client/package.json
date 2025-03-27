@@ -1,8 +1,11 @@
 {
   "name": "client",
   "version": "0.1.0",
- "homepage": "/",
-
+  "homepage": "/",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "proxy": "https://portfolio-mohd.onrender.com",
   "private": true,
   "dependencies": {
