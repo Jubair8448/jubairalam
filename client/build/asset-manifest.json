@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "./static/css/main.9b078914.css",
+    "main.js": "./static/js/main.b982e1da.js",
+    "static/media/cv_mohd.pdf": "./static/media/cv_mohd.e0185efe4e5c20508b80.pdf",
+    "static/media/heroImg.png": "./static/media/heroImg.181975c07ac849bc46b1.png",
+    "static/media/logo.png": "./static/media/logo.0e0dc033de39b0832d4f.png",
+    "static/media/onigiroku-logo.png": "./static/media/onigiroku-logo.96e7d3a8b660d97b9fd9.png",
+    "static/media/reset_password.png": "./static/media/reset_password.b4a30fe850ea65a2c16d.png",
+    "static/media/login-page.png": "./static/media/login-page.76cfbe7b9c259edfd313.png",
+    "static/media/img_upload.png": "./static/media/img_upload.de002ab66d88facb217a.png",
+    "index.html": "./index.html",
+    "main.9b078914.css.map": "./static/css/main.9b078914.css.map",
+    "main.b982e1da.js.map": "./static/js/main.b982e1da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b078914.css",
+    "static/js/main.b982e1da.js"
+  ]
+}
