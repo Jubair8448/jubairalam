@@ -8,15 +8,10 @@ import skillRoutes from './routes/skills.js';
 import portfolioRoutes from './routes/portfolio.js';
 import cookieParser from 'cookie-parser';
 import { errorHandler } from './middleware/errorMiddleware.js';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+dotenv.config();
 
 const app = express();
-dotenv.config();
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
@@ -27,18 +22,7 @@ app.use("/api/user", userRoutes);
 app.use("/api/skill", skillRoutes);
 app.use("/api/portfolio", portfolioRoutes);
 
-// Serve frontend
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
-
-    app.get('*', (req, res) =>
-        res.sendFile(
-            path.resolve(__dirname, '../', 'client', 'build', 'index.html')
-        )
-    );
-} else {
-    app.get('/', (req, res) => res.send('Please set to production'));
-}
+app.get('/', (req, res) => res.send('API running'));
 
 app.use(errorHandler);
 
@@ -47,7 +31,6 @@ const PORT = process.env.PORT || 5000;
 
 mongoose.set("strictQuery", true);
 
-// Connect to MongoDB
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('MongoDB Connected Successfully');
